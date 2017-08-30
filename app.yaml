@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static
+  static_dir: static
+
+  #where to access all urls that have a / with anything after that.
+- url: /.*
+  script: main.app
+  secure: always
